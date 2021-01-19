@@ -1,0 +1,106 @@
+
+
+.btn-new {
+    border: none;
+    margin: 5px;
+    text-align: center;
+    border-radius: 6px !important;
+    color: #fff!important;
+    font-weight: 600!important;
+    height: 38px;
+}
+/*.btn-new{
+    pointer-events: none;
+    cursor: pointer !important; 
+}*/
+.btn-new:hover {  
+ 	background: #1a1a1a !important;
+}
+.btn-dark {
+    background: #1a1a1a;
+}
+.panel-container{
+	background-image: url('../images/bg-market-buyer.jpg');
+	content: "";
+    height: 200px;
+    width: 100%;
+    display: block;
+    position: relative;
+	text-align: center;
+	color: white;
+}
+.d-flex .flex-row-reverse{
+	width: 700px !important;
+}
+.top-left {
+  position: absolute;
+  top: 100px;
+  left: 100px;
+}
+.top-up{
+	position: absolute;
+  top: 100px;
+  left: 30px;
+  line-height: 20px;	
+}
+.top-bottom{
+	position: absolute;
+	top: 150px ;
+}
+#topuppara{
+	border: 1px solid #fff;
+	padding: 3px;
+	font-size: 16px;
+	margin: 3px;
+}
+#cardname{
+	text-transform: uppercase;
+	text-align: left;
+	font-weight: bold;
+}
+#avatar{
+	height: 30px;
+	width: 30px;
+}
+.card-text span{
+	margin-left: 75px;
+}
+.card-text{
+	text-align: left !important;
+}
+#cardtopup{
+	margin-top: 50px;
+}
+#cardtopup p{
+	color: #333;
+}
+.chat-box{
+	margin-top: 180px;
+	color: #555;
+	width: 100%;
+	height: 400px;
+	/*background-color: #f2f2f2;*/
+}
+.chat-box p{
+	color: #555;
+	text-align: left;
+}
+#message{
+	height: 300px;
+	overflow: auto;
+}
+#btnsend{
+	border: 1px solid #333;
+	border-radius: 6px;
+}
+#btnsend:hover{
+	background-color: #267E54;
+	color: #fff;
+}
+/*#inputbg{
+	height: 100px;
+	background-color: #f2f2f2 !important;
+}*/
+#inpmsg{
+	width: 10px;
+}
