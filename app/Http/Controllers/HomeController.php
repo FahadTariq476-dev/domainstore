@@ -35,6 +35,7 @@ class HomeController extends Controller
 
         $uid = Auth::user()->id;
         $data['domains'] = $domain->mydomains($uid);
+        $data['alldomains'] = DB::table('domains')->get()->count();
         $data['no_domain'] = $data['domains']->count();
         $data['did'] = $did;
         $data['f_templates'] = DB::table('templates')->where('user_id', $uid)->get();

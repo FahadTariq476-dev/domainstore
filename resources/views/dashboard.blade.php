@@ -67,7 +67,7 @@
                 <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
                     <div class="info-box bg-pink hover-expand-effect">
                         <div class="icon">
-                            <i class="material-icons">playlist_add_check</i>
+                            <i class="material-icons"></i>
                         </div>
                         <div class="content">
                             <div class="text">YOUR DOMAINS</div>
@@ -78,7 +78,7 @@
                 <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
                     <div class="info-box bg-cyan hover-expand-effect">
                         <div class="icon">
-                            <i class="material-icons">help</i>
+                            <i class="material-icons"></i>
                         </div>
                         <div class="content">
                             <div class="text">NEW QUERIES</div>
@@ -89,7 +89,7 @@
                 <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
                     <div class="info-box bg-light-green hover-expand-effect">
                         <div class="icon">
-                            <i class="material-icons">forum</i>
+                            <i class="material-icons"></i>
                         </div>
                         <div class="content">
                             <div class="text">TOTAL REPLY</div>
@@ -97,17 +97,17 @@
                         </div>
                     </div>
                 </div>
-                <!-- <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
                     <div class="info-box bg-orange hover-expand-effect">
                         <div class="icon">
-                            <i class="material-icons">person_add</i>
+                            <i class="material-icons"></i>
                         </div>
                         <div class="content">
-                            <div class="text">NEW VISITORS</div>
-                            <div class="number count-to" data-from="0" data-to="1225" data-speed="1000" data-fresh-interval="20"></div>
+                            <div class="text">ALL DOMAINS</div>
+                            <div class="number count-to" data-from="0" data-to="{{$alldomains}}" data-speed="1000" data-fresh-interval="20"></div>
                         </div>
                     </div>
-                </div> -->
+                </div>
             </div>
             <!-- #END# Widgets -->
             <!-- CPU Usage -->
@@ -269,13 +269,120 @@
                 </div>
                 <!-- #END# Answered Tickets -->
             </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                    <div class="card">
+                        <div class="body bg-red">
+                            Domain Store is a global online marketplace where individuals and business owners buy and sell websites, online businesses and other digital real estate.
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                    <div class="card">
+                        <div class="body bg-cyan">
+                            On Domain Store, sellers are selling their passion projects, side hustles and online businesses. We make the process super easy by connecting you with these sellers and streamlining the negotiation and transaction.
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                    <div class="card">
+                        <div class="body bg-green">
+                            We have an integrated offers platform. You can safely use our escrow services, contracts of sale and sales support team.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                    <div class="card">
+                        <div class="header bg-orange">
+                            <h2>
+                                .com <small>Extension</small>
+                            </h2>
+                            <!-- <ul class="header-dropdown m-r--5">
+                                <li class="dropdown">
+                                    <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                        <i class="material-icons">more_vert</i>
+                                    </a>
+                                    <ul class="dropdown-menu pull-right">
+                                        <li><a href="javascript:void(0);" class=" waves-effect waves-block">Action</a></li>
+                                        <li><a href="javascript:void(0);" class=" waves-effect waves-block">Another action</a></li>
+                                        <li><a href="javascript:void(0);" class=" waves-effect waves-block">Something else here</a></li>
+                                    </ul>
+                                </li>
+                            </ul> -->
+                        </div>
+                        <div class="body align-justify">
+                            As the most recognizable domain extension, .com stands for commercial. Some may say it stands for computer or for commerce, but it was created with the intent or representing commercial websites. It is also the most popular with over 100 million registered domains.
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                    <div class="card">
+                        <div class="header bg-grey">
+                            <h2>
+                                .pk <small>Extension</small>
+                            </h2>
+                            <!-- <ul class="header-dropdown m-r--5">
+                                <li>
+                                    <a href="javascript:void(0);">
+                                        <i class="material-icons">mic</i>
+                                    </a>
+                                </li>
+                                <li class="dropdown">
+                                    <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                        <i class="material-icons">more_vert</i>
+                                    </a>
+                                    <ul class="dropdown-menu pull-right">
+                                        <li><a href="javascript:void(0);" class=" waves-effect waves-block">Action</a></li>
+                                        <li><a href="javascript:void(0);" class=" waves-effect waves-block">Another action</a></li>
+                                        <li><a href="javascript:void(0);" class=" waves-effect waves-block">Something else here</a></li>
+                                    </ul>
+                                </li>
+                            </ul> -->
+                        </div>
+                        <div class="body">
+                            The .PK domain extension is best suited for local businesses in Pakistan. Buying a .PK domain name and registering it is not as difficult as it sounds. ServerSea is one of the leading domain registrars in Pakistan. They take care of all the important .PK or .COM.PK domain registration requirements for you.
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                    <div class="card">
+                        <div class="header bg-pink">
+                            <h2>
+                                .xyz <small>Extension</small>
+                            </h2>
+                            <!-- <ul class="header-dropdown m-r--5">
+                                <li>
+                                    <a href="javascript:void(0);">
+                                        <i class="material-icons">mic</i>
+                                    </a>
+                                </li>
+                                <li class="dropdown">
+                                    <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                        <i class="material-icons">more_vert</i>
+                                    </a>
+                                    <ul class="dropdown-menu pull-right">
+                                        <li><a href="javascript:void(0);" class=" waves-effect waves-block">Action</a></li>
+                                        <li><a href="javascript:void(0);" class=" waves-effect waves-block">Another action</a></li>
+                                        <li><a href="javascript:void(0);" class=" waves-effect waves-block">Something else here</a></li>
+                                    </ul>
+                                </li>
+                            </ul> -->
+                        </div>
+                        <div class="body">
+                            .xyz is a top-level domain name. It was proposed in ICANN's New generic top-level domain Program, and became available to the general public on June 2, 2014. XYZ.com and CentralNic are the registries for the domain
+                        </div>
+                    </div>
+                </div>
 
+            </div>
             <div class="row clearfix">
                 <!-- Task Info -->
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                     <div class="card">
                         <div class="header">
-                            <h2>TASK INFOS</h2>
+                            <h2>DOMAIN INFOS</h2>
                             <ul class="header-dropdown m-r--5">
                                 <li class="dropdown">
                                     <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
@@ -313,7 +420,7 @@
                                             <td>{{ formate_template_name($domain->view_page) }}</td>
                                             <td>
                                                 @if($domain->template_name == '')
-                                                    NO HTML
+                                                    NO Name
                                                 @else
                                                     {{$domain->template_name}}
                                                 @endif
