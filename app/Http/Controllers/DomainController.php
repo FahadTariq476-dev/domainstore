@@ -132,11 +132,24 @@ class DomainController extends Controller
      * @param  int  $idate(format)  
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($did = 0)
     {
-        // Domain::where()
+        // echo $id;
+        $domain = new Domain();
+        $uid = Auth::user()->id;
+        $data['domains'] = $domain->mydomains($uid);
+        $data['did'] = $did;
+        $data['f_templates'] = DB::table('templates')->where('user_id', $uid)->get();
+        $data['found'] = $data['domains']->filter(function($dm) use($did){
+            return $dm->id == $did;
+        })->values();
+        // $data['domain_html'] = Domain::select('domain_html')->where('user_id',$uid)->get();
+        // dd($data['domain_html']);
+        if($data['found']->isEmpty() && $did != 0)
+            abort(404);
+        $data['edit_id'] = Domain::where('id',$did)->get();
+        return view('edit_domains', $data);
     }
-
     /**
      * Show the form for editing the specified resource.
      *
@@ -147,7 +160,6 @@ class DomainController extends Controller
     {
         //
     }
-
     /**
      * Update the specified resource in storage.
      *
@@ -157,7 +169,7 @@ class DomainController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        echo "this is update";
     }
 
     /**

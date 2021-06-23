@@ -1,10 +1,9 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
-
 <head>
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-    <title>Domains - Domain Store</title>
+    <title>Edit Domains - Domain Store</title>
     <!-- Favicon-->
     <link rel="icon" href="../../favicon.ico" type="image/x-icon">
 
@@ -83,7 +82,7 @@
         <div class="container-fluid">
             <div class="block-header">
                 <h2>
-                    My Domains
+                    Edit Domains
                     <small>Domains You enlisted to market</small>
                 </h2>
             </div>
@@ -93,7 +92,7 @@
                     <div class="card">
                         <div class="header">
                             <h2>
-                                Add Domain(s)
+                                Edit Domain(s)
                             </h2>
                             <small>You can add single or multiple domain comma separated</small>
                             <ul class="header-dropdown m-r--5">
@@ -111,14 +110,15 @@
                         </div>
                         <div class="body">
 
-                        <form method="POST" action="{{ route('domain.store') }}">
+                        <form method="POST" action="{{ route('domain.update') }}">
                             @csrf()
+                            @foreach($edit_id AS $i=>$edit_domain)
                                 <input type="hidden" name="did" value="{{$did}}">
                                 <div class="form-group">
                                 <label for="domain_url">Domain URL(s)*</label>
                                     <div class="form-line">
-                                        <!-- <input type="text" id="domain_url" class="form-control" placeholder="e.g example.com, abc.com, xyz.com" name="domain_url" required value="{{$did != 0 ? $found[0]->url : '' }}"> -->
-                                        <textarea name="domain_url" id="domain_url" cols="30" rows="10" class="form-control"></textarea>
+                                       
+                                        <textarea name="domain_url" id="domain_url" cols="30" rows="10" class="form-control">{{$edit_domain->url}}</textarea>
                                     </div>
                                 </div>
                                 <div class="form-group">
@@ -147,11 +147,12 @@
                                     <label for="form_template">Create Template<small style="margin-left: 20px">Write HTML</small></label>
                                 
                                     <div class="form-line">
-                                    <textarea name="domain_html" id="domain_html" cols="30" rows="10" class="form-control"></textarea>
+                                    <textarea name="domain_html" id="domain_html" cols="30" rows="10" class="form-control">{{$edit_domain->domain_html}}</textarea>
                                     </div>
                                 </div>
 
                                 <button type="submit" class="btn btn-primary m-t-15 waves-effect">{{$did != 0 ? 'Save Changes' : 'Save' }}</button>
+                                @endforeach
                             </form>
                             <br>
                             <div class="table-responsive">
@@ -162,7 +163,6 @@
                                             <th>URL</th>
                                             <th>Status</th>
                                             <th>View Page</th>
-                                            <th>Form</th>
                                             <th>Domain HTML</th>
                                             <th>Created</th>
                                             <th>Action</th>
@@ -174,7 +174,6 @@
                                             <th>URL</th>
                                             <th>Status</th>
                                             <th>View Page</th>
-                                            <th>Form</th>
                                             <th>Domain HTML</th>
                                             <th>Created</th>
                                             <th>Action</th>

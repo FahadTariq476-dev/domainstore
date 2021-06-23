@@ -555,7 +555,7 @@
               <a href="https://twitter.com/FahadTa65772406" class="twitter"><i class="bx bxl-twitter"></i></a>
               <a href="https://web.facebook.com/fahad.insafi/" class="facebook"><i class="bx bxl-facebook"></i></a>
               <a href="https://www.instagram.com/fahadbintariq476/" class="instagram"><i class="bx bxl-instagram"></i></a>
-              <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+              <a href="skype:live:e3d79b1d8f8410c0?chat" class="google-plus"><i class="bx bxl-skype"></i></a>
               <a href="https://www.linkedin.com/in/fahad-bin-tariq-3617581b2/" class="linkedin"><i class="bx bxl-linkedin"></i></a>
             </div>
           </div>

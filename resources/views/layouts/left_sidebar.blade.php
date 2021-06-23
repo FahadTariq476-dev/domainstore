@@ -55,6 +55,12 @@
                             <span>Email Templates</span>
                         </a>
                     </li>
+                    <li class="{{ request()->route()->getName() == 'contact' ? 'active' : '' }}">
+                        <a href="{{ route('contact.index') }}">
+                            <i class="material-icons">widgets</i>
+                            <span>Contacts</span>
+                        </a>
+                    </li>
                     <li class="{{ request()->route()->getName() == 'ph.show' ? 'active' : '' }}">
                         <a href="{{ route('ph.show') }}">
                             <i class="material-icons">layers</i>

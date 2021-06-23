@@ -27,8 +27,10 @@ Route::middleware('auth')->group(function(){
 Route::get('/', 'HomeController@index')->name('home');
 Route::get('/builder/{domain_id?}', 'BuilderController@showEditor');
 Route::get('/domain/query/{did?}', 'DomainController@queryShow')->name('query.show');
-Route::get('/domain/{did?}', 'DomainController@index')->name('domain.index');
+Route::get('/domain', 'DomainController@index')->name('domain.index');
+Route::get('/domain/{did?}', 'DomainController@show')->name('domain.show');
 Route::post('/domain', 'DomainController@store')->name('domain.store');
+Route::post('/domain/{did?}', 'DomainController@update')->name('domain.update');
 Route::get('/domain/del/{did}', 'DomainController@destroy')->name('domain.del');
 
 //template urls
@@ -39,6 +41,8 @@ Route::get('/template/del/{tid}', 'TemplateController@delTemp')->name('temp.del'
 //placeholder url
 Route::get('/placeholders', 'Placeholders@index')->name('ph.show');
 Route::post('/placeholders', 'Placeholders@store')->name('ph.store');
+//contact
+Route::get('/contact', 'ContactController@contact')->name('contact.index');
 //email url
 // Route::resource('/email/{$did}','EmailQueryController');
 //Password Reset

@@ -21,4 +21,9 @@ class ContactController extends Controller
         $contact->save();
         return redirect()->back()->with('message', 'Message has been sent');
     }
+    public function contact(){
+        $contacts = contact::all();
+        // return view('profile',['profiles'=>$profiles,'users'=>$users]);
+        return view('contact',['contacts'=>$contacts]);
+    }
 }
